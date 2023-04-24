@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            width: 800px; height: 500px;
+            border: 1px solid black;
+        }
+        nav button {
+            margin-right: 20px;
+            width: 100px; height: 50px;
+        }
+        nav div {
+            margin: 50px;
+            border: 1px solid red;
+            width: 600px; height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="btn1">컴퓨터사양1번</button>
+        <button class="btn2">컴퓨터사양2번</button>
+        <button class="btn3">컴퓨터사양3번</button>
+        <div class="text"></div>
+    </nav>
+
+    <script>
+        window.onload=function(){
+            let btn1, bnt2, bnt3, text;
+            text = document.querySelector(".text");
+            btn1 = document.querySelector(".btn1");
+            btn2 = document.querySelector(".btn2");
+            btn3 = document.querySelector(".btn3");
+
+            btn1.onclick = function(){
+                text.innerHTML = "2020 123";
+            }
+            btn2.onclick = function(){
+                text.innerHTML = "adg 123";
+            }
+            btn3.onclick = function(){
+                text.innerHTML = "2020qweasd 123";
+            }
+        }
+    </script>
+</body>
+</html>
