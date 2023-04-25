@@ -226,7 +226,7 @@ header {
 }
 .right_menu .right_bottom_menu li {
     width: 80%; height: 36px;
-    border: 1px solid red;
+    border: 0px solid red;
     font-size: 14px;
     margin: 0 auto;
     color: #333333
@@ -246,34 +246,107 @@ header {
     border-bottom: 1px solid #ccc;
 }
 .at1 {
-    border: 1px solid black;
+    border: 0px solid black;
     width: 100%; height: 200px;
     line-height: 200px;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 .at2 {
-    border: 1px solid black;
+    border: 0px solid black;
     width: 100%; height: 450px;
 }
 .big_box {
+    position: relative;
     margin: 0 auto;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     width: 50%; height: 450px;
 }
 .big_box h1 {
-    padding: 50px;
+    margin: 0 auto;
+    width: 80%; height: 80px;
+    line-height: 110px;
+    border: 0px solid black;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.5rem;
+}
+/* 체크박스 */
+.at2 .check {
+    position: absolute; top: 160px; left: 350px;
+    width: 30%; height: 35px;
+    line-height: 35px;
+    display: flex;
+    border: 0px solid red;
+    font-size: 13px;
+}
+.at2 .check li {
+    margin-right: 10px;
+    letter-spacing: -1px;
+}
+.at2 .check li input {
+    margin-right: 3px;
+    position: relative;
+    top: 2px;
+}
+/* 로그인 패스워드 */
+.at2 .login_input {
+    position: absolute; top: 200px; left: 340px;
+    border: 0px solid black;
+    width: 50%; height: 150px;
+}
+.at2 .login_input li {
+    border: 0px solid black;
+    width: 260px; height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    background: #3d3d3d; color: white;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.at2 .login_input li:hover{ 
+    opacity: 0.9;
+    transition: all 0.2s;
+}
+.at2 .login_input input {
+    width: 100%; height: 100%;
+    font-size: 15px;
+    text-indent: 10px;
+}
+.at2 .find {
+    position: absolute;top: 345px; left: 340px;
+    border: 0px solid black;
+    width: 260px; height: 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.at2 .find li {
+    border: 0px solid black;
+    width: 45%; height: 100%;
+    font-size: 12px;
+    letter-spacing: -1px;
+    cursor: pointer;
+}
+.at2 .find li:hover {
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+.at2 .find li:last-child {
+    width: 19%;
 }
 
+
+
 /* footer */
-/* 
+
 footer {
-    border: 1px solid red;
+    border: 0px solid red;
     width: 100%; height: 160px;
-} */
+}
 
 /* footer에 top */
-/*
+
 .ul_top_text {
     margin: auto;
     border: 0px solid black;
@@ -303,7 +376,8 @@ footer {
     text-align: center;
 }
 /* footer에 mid */
-/*.ul_mid_text {
+
+.ul_mid_text {
     width: 100%; height: 30px;
     border: 0px solid blue;
     display: flex;
@@ -331,9 +405,9 @@ footer {
 }
 .ul_mid_text li:nth-child(5) {
     width: 10%;
-} */
+}
 /* footer에 bottom */
-/* .ul_bottom_text{
+.ul_bottom_text{
     width: 100%; height: 30px;
     line-height: 30px;
     display: flex;
@@ -342,4 +416,4 @@ footer {
     border: 0px solid black;
     font-size: 12px;
     opacity: 0.6;
-}  */
+} 

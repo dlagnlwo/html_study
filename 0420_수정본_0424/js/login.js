@@ -1,6 +1,6 @@
 const macA= {
     menuA:[
-        "브랜드 스토리","메뉴","매장안내","창업안내",
+        "브랜드 스토리","메뉴","매장안내","고객샌터",
         "커뮤니티"
     ],
     brandA: [
@@ -19,7 +19,7 @@ const macA= {
         "공지사항", "포토후기", "이벤트","고객의 소리"
     ],
     left_top_menuA: [
-        "브랜드 스토리", "메뉴", "매장안내", "창업안내", "커뮤니티"
+        "브랜드 스토리", "메뉴", "매장안내", "고객샌터", "커뮤니티"
     ],
     right_top_menuA: [
         "로그인", "회원가입"
@@ -37,6 +37,19 @@ const macA= {
     ],
     ul_bottom_textA: [
         "Copyright The Cafe.", "All rights reserved."
+    ],
+    checkboxA : [
+        "아이디 저장", "자동로그인", "보안접속"
+    ],
+    fintA: [
+        "아이디ㆍ비밀번호 찾기", "회원가입"
+    ],
+    ul_top_textA: [
+        "개인정보처리방침", "이용약관"
+    ],
+    ul_mid_textA: [
+        "The Cafe", "대표: 홍길동", "서울특별시 서울 마포구 신촌로 176 중앙빌딩 (이대역)",
+        "고객샌터: 070-1234-6789", "사업자등록번호:000-00-00000"
     ]
 }
 
@@ -89,6 +102,49 @@ window.onload = function(){
     macA.comuA.forEach((item, ind) => {
         sub_comu[ind].innerHTML = macA.comuA[ind];
     })
+    //find
+    let find = document.querySelector(".find").getElementsByTagName("li");
+    macA.fintA.forEach((item, ind) => {
+        find[ind].innerHTML = macA.fintA[ind];
+    })
+     //footer ul_top_text
+     let ul_top_text = document.querySelector(".ul_top_text").getElementsByTagName("li");
+     macA.ul_top_textA.forEach((item, ind) => {
+         ul_top_text[ind].innerHTML = macA.ul_top_textA[ind];
+     })
+ 
+     //footer ul_mid_text
+     let ul_mid_text = document.querySelector(".ul_mid_text").getElementsByTagName("li");
+     macA.ul_mid_textA.forEach((item, ind) => {
+         ul_mid_text[ind].innerHTML = macA.ul_mid_textA[ind];
+     })
+     //footer ul_bottom_text
+     let ul_bottom_text = document.querySelector(".ul_bottom_text").getElementsByTagName("li");
+     macA.ul_bottom_textA.forEach((item, ind) => {
+         ul_bottom_text[ind].innerHTML = macA.ul_bottom_textA[ind];
+     })
+
+    //로그인
+    let ok, id, pw, id_value, pw_value;
+    ok = document.querySelector(".ok");
+    id = document.querySelector(".id");
+    pw = document.querySelector(".pw");
+    ok.onclick = function(){
+        id_value = id.value;
+        pw_value = parseInt(pw.value);
+        console.log("아이디 : " + id_value, "비밀번호 : " + pw_value);
+
+        if (id_value != "abc"){
+            alert("아이디가 틀립니다.");
+        }else if (pw_value != 123) {
+            alert("비밀번호가 틀립니다.");
+        }else if (id_value == "abc" && pw_value == 123) {
+            alert("로그인 성공");
+            at1.style.display = "none";
+        }else{
+            alert("로그인 실패");
+        }
+    }
 };
 
 $(function(){
@@ -120,4 +176,6 @@ $(function(){
     $(".exit2 i").on("click", function(){
         $(".right_menu").animate({"left": "1910px"})
     })
+
+
 })
